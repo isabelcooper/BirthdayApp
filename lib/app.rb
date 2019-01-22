@@ -8,15 +8,20 @@
 require 'sinatra'
 require 'shotgun'
 
-    get '/' do
-      @name = params[:name]
-      erb(:index)
-    end
+  get '/' do
+    @name = params[:name]
+    erb(:index)
+  end
 
-    get '/happy-birthday' do
+  post '/happy-birthday' do
+    @name = params[:name]
+    @date = params[:date]
+    today = Date.today.to_s
+    full_date = Date.parse(@date)
+    @days = (full_date - Date.today).to_i
+    if @date == today
       erb(:happy_birthday)
+    else
+      erb(:countdown)
     end
-
-    get '/countdown' do
-      "Countdown"
-    end
+  end
