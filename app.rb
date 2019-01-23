@@ -1,16 +1,10 @@
-# require 'socket'
-#
-# def run_server
-#   server = TCPServer.new(2345)
-# loop do
-#   socket = server.accept
+require 'sinatra/base'
 
-require 'sinatra'
-require 'shotgun'
+class BirthdayGreeter < Sinatra::Base
 
   get '/' do
     @name = params[:name]
-    erb(:index)
+    erb(:form)
   end
 
   post '/happy-birthday' do
@@ -25,3 +19,5 @@ require 'shotgun'
       erb(:countdown)
     end
   end
+
+end
