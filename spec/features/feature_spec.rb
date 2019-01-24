@@ -11,15 +11,6 @@ feature 'check page loads' do
 end
 
 feature 'wish happy birthday' do
-  #
-  # let(:date_formatter) { double(:date_formatter, days_left: 10)}
-  # let(:date_formatter_class) { double(:date_formatter_class, new: date_formatter) }
-  # let(:subject) { BirthdayGreeter.new(date_formatter_class) }
-  #
-  # scenario 'date formatter is run' do
-  #   expect(date_formatter).to receive(:days_left)
-  #   load_and_fill_form(Date.today)
-  # end
 
   scenario 'date entered is today' do
     load_and_fill_form(Date.today)
