@@ -1,9 +1,31 @@
-<h1>Hello </h1>
+<html>
+ <head>
+  <style>
+    body{
+      background-color: #b276e8;
+      text-align: center;
+      color: #171e54
+    }
+    button, input{
+      font-family: inherit;
+      font-size: 100%;
+      color: #171e54
+    }
+  </style>
 
-<form action= "/happy-birthday" method="post" >
-  <h2>What's your name?</h2> <br>
-  <input type ="text" name ="name"> <br>
-  <h2>When's your birthday? </h2> <br>
-  <input type ="date" name ="date" min="2019-01-22"> <br>
-  <input type ="submit" value ="Enter"> <br>
-</form>
+    <h1>Hello<%=@name%></h1>
+    <hr>
+
+</head>
+  <body>
+    <form action= "/happy-birthday" method="post" style="" >
+      <h2>What's your name?</h2> <br>
+      <input type ="text" name ="name" required> <br> <br>
+      <h2>When's your birthday? </h2> <br>
+      <input type ="date" name ="date" min="2018-01-22" required> <br>
+      <input type ="submit" value ="Enter"> <br>
+    </form>
+
+  </body>
+
+</html>
