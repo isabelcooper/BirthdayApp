@@ -15,11 +15,8 @@ class BirthdayGreeter < Sinatra::Base
   end
 
   post '/name' do
-    @name = params[:name]
-    @date = params[:date]
-    full_birthday = Date.parse(@date)
-    @person = Person.create(@name, full_birthday)
-  #  $person = Person.new(@name, full_birthday)
+    full_birthday = Date.parse(params[:date])
+    @person = Person.create(params[:name], full_birthday, params[:color])
     redirect '/happy-birthday'
   end
 

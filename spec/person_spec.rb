@@ -2,7 +2,7 @@ require 'person'
 
 describe Person do
 
-  let(:subject) { Person.new("Cat", Date.today + 10, date_formatter_class ) }
+  let(:subject) { Person.new("Cat", Date.today + 10, "#fff", date_formatter_class ) }
   let(:date_formatter_class) { double(:date_formatter_class, new: date_formatter) }
   let(:date_formatter) { double(:date_formatter, days_to_next_birthday: 10 , days_since_past_birthday: 355 ) }
 

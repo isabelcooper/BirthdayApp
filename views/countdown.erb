@@ -3,7 +3,8 @@
 <head>
 <style>
   body {
-  background-color:#42f4df
+  background-color: <%=@person.color%>
+
 }
 </style>
 </head>
@@ -13,9 +14,7 @@
   <br>
 <h1 style="text-align:center; color: #fff"> Only <%=@person.days_to_next_birthday%> day<%=@plural%> until your birthday <%=@person.name%>! </h1> <br>
 
-<% if @person.days_since_past_birthday > 0 %>
 <p style= "text-align:center; color: #fff"> Your last birthday was <%=@person.days_since_past_birthday%> days ago </p> <br>
-<%end%>
 
 <% if @person.name.downcase == "cat" %>
 <center> <img src="http://bit.ly/1eze8aE" alt="Wahoo"> </center> <br>
