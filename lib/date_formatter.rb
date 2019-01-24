@@ -1,24 +1,26 @@
 class DateFormatter
 
-  def initialize
+  def initialize(date)
+    @date = date
     @days
   end
 
-  def days_to_next_birthday(date)
-    days_left(date)
+  def days_to_next_birthday
+    days_left
     minus_numbers
     multiple_years
     @days
   end
 
-  def days_since_past_birthday(date)
-    (Date.today- date).to_i
+  def days_since_past_birthday
+    365 - days_to_next_birthday
+    #@days < 0 ? (Date.today- @date).to_i : (Date.today+ @date).to_i
   end
 
   private
 
-  def days_left(date)
-    @days = (date - Date.today).to_i
+  def days_left
+    @days = (@date - Date.today).to_i
   end
 
   def minus_numbers
