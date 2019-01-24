@@ -1,15 +1,35 @@
 <html>
  <head>
   <style>
+    body, input, select {
+      color: #2f215b;
+      font-size: 18px
+    }
+
+    input, select {
+      margin-top: 10px;
+      width: 300px;
+    }
+
     body{
       background-color: #b276e8;
-      text-align: center;
-      color: #171e54
+      text-align: center
     }
-    button, input{
-      font-family: inherit;
-      font-size: 100%;
-      color: #171e54
+
+    input{
+      font-family: Arial, Helvetica, sans-serif;
+      height: 30px;
+      -webkit-border-radius: 10px;
+      margin-top: 10px
+    }
+
+    input[type=submit] {
+      border: none;
+      height: 40px;
+      background-color: pink ;
+      border-bottom: 2px solid #2f215b;
+      padding: auto;
+      margin-top: 30px
     }
   </style>
 
@@ -19,19 +39,18 @@
 </head>
   <body>
     <form action= "/name" method="post" style="" >
-      <h2>What's your name?</h2> <br>
-      <input type ="text" name ="name" required> <br> <br>
-      <h2>When's your birthday? </h2> <br>
-      <input type ="date" name ="date" min="2018-01-22" required> <br>
+      <h2>What's your name?</h2>
+      <input type ="text" name ="name" required>
+      <h2>When's your birthday? </h2>
+      <input type ="date" name ="date" min="2018-01-22" required>
       <h2>What's your favourite colour? </h2>
       <select name= "color">
         <option value= #42f4df>Blue</option>
         <option value= "pink">Pink</option>
         <option value= "#fff">White</option>
         <option value= "#b276e8">Purple</option>
-      </select>
-      <br> <br>
-      <input type ="submit" value ="Enter"> <br>
+      </select> <br>
+      <input type ="submit" value ="Enter">
     </form>
 
   </body>
